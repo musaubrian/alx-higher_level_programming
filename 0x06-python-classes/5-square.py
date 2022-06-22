@@ -6,7 +6,7 @@ Class Square defines a square
 
 class Square:
     """
-    class defines a sqaure
+    Class defining a square object.
     """
     def __init__(self, size=0):
         """
@@ -18,10 +18,9 @@ class Square:
     @property
     def size(self):
         """
-        Get square size.
-
+        Get Square size.
         Returns:
-            Square size
+            The square size.
         """
         return self.__size
 
@@ -46,11 +45,9 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        """
-        print square with # character
-        """
+        """Print the square with the # character."""
         for row in range(0, self.__size):
-            [print("#", end="")for col in range(self.__size)]
-            print()
+            [print("#", end="") for col in range(self.__size)]
+            print("")
         if self.__size == 0:
-            print()
+            print("")
