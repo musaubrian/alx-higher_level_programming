@@ -1,11 +1,11 @@
 #!/usr/bin/python3
+"""
+Class Square that defines a square.
+"""
 
-"""
-Class Square defines a square
-"""
 
 class Square:
-   """
+    """
     Class defining a square object.
     """
     def __init__(self, size=0, position=(0, 0)):
@@ -71,4 +71,4 @@ class Square:
         for i in range(0, self.__size):
             [print(" ", end="") for j in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
-            print("") 
+            print("")
