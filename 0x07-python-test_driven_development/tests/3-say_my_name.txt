@@ -1,0 +1,51 @@
+This module ``3-say_my_name`` prints out the first and last name
+================================================================
+
+How it should work::
+====================
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+When first_name is an empty string::
+====================================
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("", "Smith")
+My name is  Smith
+
+When first_name is not a string::
+=================================
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name(10, "james")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ernest/unit-test/3-say_my_name.py", line 14, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+
+When last_name is not a string::
+================================
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("john", 10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ernest/unit-test/3-say_my_name.py", line 16, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+
+When both first_name and last_name are not strings::
+====================================================
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("john", 10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ernest/unit-test/3-say_my_name.py", line 16, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+
+When no argument is passed::
+============================
+>>> say_my_name()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
