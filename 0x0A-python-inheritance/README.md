@@ -1,1 +1,1 @@
-## WE take a look at class inheritance in python
+## We take a look at class inheritance in python
