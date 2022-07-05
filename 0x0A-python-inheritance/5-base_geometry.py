@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Defines class `BaseGemoetry`"""
+"""contains an empty class `BaseGemoetry`"""
 
 class BaseGemoetry:
-    """Empty class"""
+    """
+    Defines BaseGemoetry
+    """
     pass
