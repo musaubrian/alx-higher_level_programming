@@ -27,6 +27,6 @@ class BaseGeometry:
         self.name = name
         self.value = value
         if not isinstance(self.value, int):
-            raise TypeError(f"{name} must be an integer")
+            raise TypeError(self.name + "must be an integer")
         elif self.value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError(self.name + "must be greater than 0")
