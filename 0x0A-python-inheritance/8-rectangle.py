@@ -4,9 +4,10 @@ Module that inherits `BaseGeometry` class
 """
 BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
-    Geometry object from inherited class BaseGeometry 
+    Geometry object from inherited class BaseGeometry
     """
 
     def __init__(self, width, height) -> None:

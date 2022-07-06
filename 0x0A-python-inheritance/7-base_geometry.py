@@ -3,6 +3,7 @@
 Module contains `BaseGeometry` class
 """
 
+
 class BaseGeometry:
     """
     Base class for geometry objects
