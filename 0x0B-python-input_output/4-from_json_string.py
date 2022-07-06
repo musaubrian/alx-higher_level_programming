@@ -5,7 +5,7 @@ module contains `from_json_String(...)` function
 import json
 
 
-def from_json_String(my_str):
+def from_json_string(my_str):
     """
     Args:
         @my_str: JSON string
