@@ -3,16 +3,18 @@
 """reads stdin line by line and computes metrics"""
 from sys import stdin
 
+
 def print_metrics(size, status_codes):
     """
-    print accumulated metrics
+    Prints accumulated metrics.
     Args:
-        size: accumulated read file size(int)
-        status_codes: accumulated count of status codes(dict)
+        size (int): The accumulated read file size.
+        status_codes (dict): The accumulated count of status codes.
     """
     print(f"File size: {size}")
     for key in sorted(status_codes):
         print(f"{key}: {status_codes[key]}")
+
 
 if __name__ == "__main__":
 
@@ -22,9 +24,9 @@ if __name__ == "__main__":
     valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
 
     try:
-        for line in stdin:
+        for line stdin:
             if count == 10:
-                print_metrics(size, status_codes)
+                print_stats(size, status_codes)
                 count = 1
             else:
                 count += 1
