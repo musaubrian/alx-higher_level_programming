@@ -16,8 +16,7 @@ class Rectangle(BaseClass):
         Args:
             @width: width of the Rectangle
             @height: heightof the rectangle
-            @x
-            @y
+            @x, @y
         """
         super().__init__(id)
 
@@ -25,7 +24,6 @@ class Rectangle(BaseClass):
         self.height = height
         self.x = x
         self.y = y
-
 
     @property
     def width(self):
@@ -58,7 +56,7 @@ class Rectangle(BaseClass):
         elif value < 0:
             raise ValueError("height must be > 0")
         self.__height = value
-    
+
     @property
     def x(self):
         """
