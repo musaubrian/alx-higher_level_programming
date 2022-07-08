@@ -2,6 +2,7 @@
 
 """Defines `inherits_from` that checks object inherits from a class"""
 
+
 def inherits_from(obj, a_class):
     """
     Return:

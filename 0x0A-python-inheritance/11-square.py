@@ -5,6 +5,7 @@ Module contains class Square that inherits class Rectangle
 
 Rectangle = __import__("9-rectangle").Rectangle
 
+
 class Square(Rectangle):
     """
     class Square defines a square geometry
@@ -24,8 +25,8 @@ class Square(Rectangle):
         """
         calculates area of the square
         """
-        return self.__size **2
-    
+        return self.__size ** 2
+
     def __str__(self) -> str:
         """
         return string representaion of the square object

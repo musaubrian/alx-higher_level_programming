@@ -2,6 +2,7 @@
 
 """Defines MyList class that inherits from class list"""
 
+
 class MyList(list):
     """Subclass of the class list"""
 

@@ -3,6 +3,7 @@
 contains `add_attribute` function
 """
 
+
 def add_attribute(obj, attr, value):
     """
     Adds a new attribute to an object if possible
