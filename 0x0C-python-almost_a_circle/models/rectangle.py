@@ -151,10 +151,10 @@ class Rectangle(BaseClass):
                     else:
                         self.id = value
                 elif key == arg_names[1]:
-                    self.width = value
+                    self.__width = value
                 elif key == arg_names[2]:
-                    self.height = value
+                    self.__height = value
                 elif key == arg_names[3]:
-                    self.x = value
+                    self.__x = value
                 elif key == arg_names[4]:
-                    self.y = value
+                    self.__y = value
