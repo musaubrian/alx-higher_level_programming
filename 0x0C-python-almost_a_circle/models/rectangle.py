@@ -109,7 +109,8 @@ class Rectangle(BaseClass):
             [Rectangle] (id) <x>/<y> - <width>/<height>
         """
         return (
-                f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
+                f"[{self.__class__.__name__}]"
+                f" ({self.id}) {self.__x}/{self.__y}"
                 f" - {self.__width}/{self.__height}"
                 )
 
