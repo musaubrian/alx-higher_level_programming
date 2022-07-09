@@ -35,7 +35,7 @@ class Square(Rectangle):
                 f"- {self.width}"
                 )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update square instance"""
         sq_arg_counter = 0
         for arg in args:
@@ -51,3 +51,18 @@ class Square(Rectangle):
             elif sq_arg_counter == 3:
                 self.y = arg
             sq_arg_counter += 1
+
+        for k, v in kwargs.items():
+            arg_names = ["id", "size", "x", "y"]
+            if k in arg_names and arg_names.index(k) >= sq_arg_counter:
+                if k == arg_names == 0:
+                    if v is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == arg_names[1]:
+                    self.size = v
+                elif k == arg_names[2]:
+                    self.x = v
+                elif k == arg_names[3]:
+                    self.y = v
