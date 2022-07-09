@@ -23,6 +23,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, size):
+        """setter method for size"""
         self.width = size
         self.height = size
 
@@ -31,5 +32,22 @@ class Square(Rectangle):
         return(
                 f"[{self.__class__.__name__}] "
                 f"({self.id}) {self.x}/{self.y} "
-                f"- {self.size}"
+                f"- {self.width}"
                 )
+
+    def update(self, *args):
+        """update square instance"""
+        sq_arg_counter = 0
+        for arg in args:
+            if sq_arg_counter == 0:
+                if arg is None:
+                    self.__init__(self.size, self.x, self.y)
+                else:
+                    self.id = arg
+            elif sq_arg_counter == 1:
+                self.size = arg
+            elif sq_arg_counter == 2:
+                self.x = arg
+            elif sq_arg_counter == 3:
+                self.y = arg
+            sq_arg_counter += 1
