@@ -17,7 +17,7 @@ class Rectangle(BaseClass):
             @width: width of the Rectangle
             @height: heightof the rectangle
             @x, @y
-        """
+       """
         super().__init__(id)
 
         self.width = width
@@ -92,3 +92,10 @@ class Rectangle(BaseClass):
     def area(self):
         """returns area of the rectangle"""
         return self.__height * self.__width
+
+    def display(self):
+        """print rectangle instance to stdout using `#`"""
+        for h in range(self.__height):
+            for w in range(self.__width):
+                print("#", end="")
+            print("")
