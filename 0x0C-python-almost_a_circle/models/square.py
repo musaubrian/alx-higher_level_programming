@@ -25,3 +25,11 @@ class Square(Rectangle):
     def size(self, size):
         self.width = size
         self.height = size
+
+    def __str__(self):
+        """override __str__ of retcangle class"""
+        return(
+                f"[{self.__class__.__name__}] "
+                f"({self.id}) {self.x}/{self.y} "
+                f"- {self.size}"
+                )
