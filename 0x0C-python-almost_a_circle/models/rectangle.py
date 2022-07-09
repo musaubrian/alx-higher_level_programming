@@ -113,8 +113,9 @@ class Rectangle(BaseClass):
                 f" - {self.__width}/{self.__height}"
                 )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
+        updates rectangle instance
         Args:
             @*args: (int)
             Assigns an argument to each attribute
@@ -132,11 +133,28 @@ class Rectangle(BaseClass):
                 else:
                     self.id = arg
             elif arg_counter == 1:
-                self.width = arg
+                self.__width = arg
             elif arg_counter == 2:
-                self.height = arg
+                self.__height = arg
             elif arg_counter == 3:
-                self.x = arg
+                self.__x = arg
             elif arg_counter == 4:
-                self.y = arg
+                self.__y = arg
             arg_counter += 1
+
+        for key, value in kwargs.items():
+            arg_names = ["id", "width", "height", "x", "y"]
+            if key in arg_names and arg_names.index(key) >= arg_counter:
+                if key == arg_names[0]:
+                    if value is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = value
+                elif key == arg_names[1]:
+                    self.width = value
+                elif key == arg_names[2]:
+                    self.height = value
+                elif key == arg_names[3]:
+                    self.x = value
+                elif key == arg_names[4]:
+                    self.y = value
