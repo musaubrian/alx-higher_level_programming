@@ -4,6 +4,6 @@
 
 exports.converter = function (base) {
   return function (toConv) {
-    return toConv.toString(base)
-  }
-}
+    return toConv.toString(base);
+  };
+};
