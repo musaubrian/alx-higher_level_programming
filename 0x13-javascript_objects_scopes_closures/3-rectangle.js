@@ -9,13 +9,13 @@ module.exports = class Rectangle {
     }
   }
 
-  print() {
+  print () {
     for (let index = 0; index < this.height; index++) {
       let rectView = '';
       for (let index = 0; index < this.width; index++) {
-        rectView += 'X';        
+        rectView += 'X';
       }
-      console.log(rectView);      
+      console.log(rectView);
     }
   }
 };

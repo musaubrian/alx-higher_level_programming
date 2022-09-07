@@ -9,24 +9,24 @@ module.exports = class Rectangle {
     }
   }
 
-  print() {
+  print () {
     for (let index = 0; index < this.height; index++) {
       let rectView = '';
       for (let index = 0; index < this.width; index++) {
-        rectView += 'X';        
+        rectView += 'X';
       }
-      console.log(rectView);      
+      console.log(rectView);
     }
   }
 
-  rotate() {
+  rotate () {
     const newHeight = this.width;
     const newWidth = this.height;
     this.height = newHeight;
     this.width = newWidth;
   }
-  
-  double() {
+
+  double () {
     this.width = this.width * 2;
     this.height = this.height * 2;
   }
