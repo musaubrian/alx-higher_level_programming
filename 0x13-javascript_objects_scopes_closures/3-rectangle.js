@@ -4,7 +4,7 @@
 module.exports = class Rectangle {
   constructor (w, h) {
     if (w <= 0 || h <= 0) {
-      new Rectangle;
+      new Rectangle();
     }
     this.width = w;
     this.height = h;
@@ -16,8 +16,7 @@ module.exports = class Rectangle {
       for (let index = 0; index < this.width; index++) {
         rectView += 'X';        
       }
-      console.log(rectView)
-      
+      console.log(rectView);      
     }
   }
 };
