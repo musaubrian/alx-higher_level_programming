@@ -3,11 +3,10 @@
 // class defining a square
 // inheriting from a rectangle
 
-const Rectangle = require('./4-rectangle');
-module.exports = class Square extends Rectangle {
+const square = require('./5-square');
+module.exports = class Square extends square {
   constructor (size) {
     super(size, size);
-    this.size = size;
   }
 
   charPrint (c) {
@@ -16,7 +15,7 @@ module.exports = class Square extends Rectangle {
     }
     for (let i = 0; i < this.size; i++) {
       let squareView = '';
-      for (let j = 0; j < this.size; j++) {
+      for (let i = 0; i < this.size; i++) {
         squareView += c;
       }
       console.log(squareView);
