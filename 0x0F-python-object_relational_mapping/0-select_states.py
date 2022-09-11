@@ -16,7 +16,7 @@ def list_states(username, password, db_name):
             port=3306
             )
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM `states` ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
