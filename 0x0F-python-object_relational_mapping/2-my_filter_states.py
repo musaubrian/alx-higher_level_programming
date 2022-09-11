@@ -1,8 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
-from sys import argv
+"""
+lists all states with a given name
+"""
+
 import MySQLdb
-
+from sys import argv
 
 if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
