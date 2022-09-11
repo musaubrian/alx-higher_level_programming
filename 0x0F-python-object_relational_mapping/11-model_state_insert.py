@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
 """
-prints the State object with the name
-passed as argument from the database
+adds the State object “Louisiana” to the database
 """
 
+from model_state import Base, State
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sys import argv
-from model_state import Base, State
+
 
 if __name__ == "__main__":
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
@@ -18,9 +18,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     session = Session()
-    state = session.query(State).filter_by(name=argv[4]).first()
-    if state is not None:
-        print(str(state.id))
-    else:
-        print("Not found")
+    new_state = State(name='Louisiana')
+    session.add(new_state)
+    state = session.query(State).filter_by(name='Louisiana').first()
+    print(str(state.id))
+    session.commit()
     session.close()
