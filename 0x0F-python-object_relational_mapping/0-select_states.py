@@ -1,20 +1,15 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+
+"""
+python script that lists all states from the database hbtn_0e_0_usa
+"""
 
 import MySQLdb
-import sys
+from sys import argv
 
-
-def list_states(username, password, db_name):
-    """
-    lists all the states in the database
-    """
-    db = MySQLdb.connect(
-            host="localhost",
-            user=username,
-            passwd=password,
-            db=db_name,
-            port=3306
-            )
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                         passwd=argv[2], db=argv[3], charset="utf8")
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cursor.fetchall()
@@ -22,10 +17,3 @@ def list_states(username, password, db_name):
         print(row)
     cursor.close()
     db.close()
-
-
-if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-    list_states(username=username, password=password, db_name=db_name)
