@@ -3,24 +3,26 @@
 import MySQLdb
 import sys
 
+
 def list_states(username, password, db_name):
     """
     lists all the states in the database
     """
-    database = MySQLdb.connect(
+    db = MySQLdb.connect(
             host="localhost",
             user=username,
             passwd=password,
             db=db_name,
             port=3306
             )
-    cursor = database.cursor()
+    cursor = db.cursor()
     cursor.execute("SELECT * FROM `states` ORDER BY id ASC")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
     cursor.close()
-    database.close()
+    db.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
