@@ -1,4 +1,4 @@
-#!/bin/node
+#!/usr/bin/node
 
 // reads and prints content of a file
 // passed as an argument
